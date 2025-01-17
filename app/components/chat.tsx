@@ -94,6 +94,9 @@ const Chat = ({
         body: JSON.stringify({
           content: text,
         }),
+        headers: {
+          "Content-Type": "application/json",
+        },
       }
     );
     const stream = AssistantStream.fromReadableStream(response.body);
